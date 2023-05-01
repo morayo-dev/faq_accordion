@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: no-repeat center center / cover url('https://source.unsplash.com/J_F_003jcEQ') #000;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+  width: 60%;
+  margin-inline: auto;
+
+}
+
+.container {
+  border: 2px solid white;
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 2rem 3rem;
+  box-shadow: 1px 1px 5px aliceblue;
+  font-family: 'Times New Roman', Times, sans-serif;
+  transition: 0.5s;
+}
+
+.content-container {
+  padding: 0.9rem 0;
+  margin-top: 1rem;
+  transition: 0.8s;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  line-height: 1.5;
+  word-spacing: 4px;
+  /* align-items: left; */
+}
+
+.question {
+  border-bottom: 2px solid #000;
+  text-align: start;
+  position: relative;
+  cursor: pointer;
+
+}
+
+.question::after {
+  content: '+';
+  position: absolute;
+  right: -3px;
+}
+
+.answer {
+  height: 0;
+  overflow: hidden;
+  padding-top: 1rem;
+  ;
+}
+
+/* Javascript Styling */
+
+.content-container.active .question::after {
+  content: '-';
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  top: -10px;
+}
+
+.content-container.active .answer {
+  height: auto;
+  transition: 0.5s;
+
+}
